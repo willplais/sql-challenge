@@ -7,7 +7,7 @@ ON e.emp_no = s.emp_no;
 -- Question Two
 SELECT e.first_name, e.last_name, e.hire_date
 FROM employees e
-WHERE e.hire_date LIKE '%1986%';
+WHERE EXTRACT(YEAR FROM e.hire_date) = 1986;
 
 -- Question Three
 SELECT e.first_name, e.last_name, dm.emp_no, d.dept_name, dm.dept_no
